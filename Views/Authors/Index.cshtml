@@ -1,0 +1,53 @@
+﻿@model IEnumerable<NETD_Lab5.Models.Author>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.lastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.firstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.website)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.yob)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.lastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.firstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.website)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.yob)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.authorID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.authorID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.authorID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

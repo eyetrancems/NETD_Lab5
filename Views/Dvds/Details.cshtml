@@ -1,0 +1,54 @@
+﻿@model NETD_Lab5.Models.Dvd
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Dvd</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.director)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.director)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.actor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.actor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.studio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.studio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.copies)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.copies)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ASIN)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ASIN)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.dvdID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
